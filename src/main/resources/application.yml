@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /poc
+
+spring:
+  profiles:
+    active: ${PROFILES_ACTIVE}
+
+management:
+  endpoint:
+    health:
+      show-components: always
+    endpoints:
+      web:
+        exposure:
+          include: actuator, logfile, metrics, health, info
+        base-path: /v1/actuator
+
+cloud:
+  aws:
+    credentials:
+      access-key: localstack
+      secret-key: localstack
+    region: sa-east-1
+
+sqs:
+  endpoint: http://localhost:4566
+  url:
+      envia-documento: /000000000000/sqs-envia-documento-service-queue-loc"
