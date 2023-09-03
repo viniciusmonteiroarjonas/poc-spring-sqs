@@ -14,12 +14,9 @@ public class SQSClient {
     private AmazonSQS sqsClient;
 
     public void sendMessage(String message, String url) {
-
         SendMessageRequest sendMessageRequest = new SendMessageRequest()
                 .withQueueUrl(url)
                 .withMessageBody(message);
-
         sqsClient.sendMessage(sendMessageRequest);
-
     }
 }

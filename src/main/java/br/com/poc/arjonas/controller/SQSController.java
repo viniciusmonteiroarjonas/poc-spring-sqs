@@ -16,8 +16,8 @@ public class SQSController {
     SQSService sqsService;
 
     @PostMapping("/envia/documento")
-    public String sendDocument(@RequestBody @Valid DocumentoRequestDTO request) {
-        sqsService.sendDocument(request);
+    public String sendDocument(@RequestBody DocumentoRequestDTO request) {
+        sqsService.sendDocument(request.getDocumento());
         return "Enviado documento para fila";
     }
 }

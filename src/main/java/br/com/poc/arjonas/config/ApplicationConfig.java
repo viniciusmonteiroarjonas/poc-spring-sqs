@@ -11,6 +11,9 @@ public class ApplicationConfig {
     @Value("${sqs.endpoint}")
     private String getSqsEndpoint;
 
+    @Value("${sqs.queue-envia-documento}")
+    private String getSqsQueueEnviaDocumento;
+
     @Value("${sqs.url.envia-documento}")
     private String getSqsUrlEnviaDocumento;
 
@@ -20,6 +23,6 @@ public class ApplicationConfig {
     @Value("${cloud.aws.credentials.secret-key}")
     private String getCloudAwsCredentialsSecretKey;
 
-    @Value("${cloud.aws.region}")
+    @Value("${cloud.aws.region.static}")
     private String getCloudAwsRegion;
 }

@@ -6,6 +6,11 @@ server:
 spring:
   profiles:
     active: ${PROFILES_ACTIVE}
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.aws.autoconfigure.messaging.MessagingAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration
 
 management:
   endpoint:
@@ -22,9 +27,15 @@ cloud:
     credentials:
       access-key: localstack
       secret-key: localstack
-    region: sa-east-1
+    region:
+      static: sa-east-1
+    stack:
+      auto: false
 
 sqs:
   endpoint: http://localhost:4566
   url:
-      envia-documento: /000000000000/sqs-envia-documento-service-queue-loc"
+    envia-documento: /000000000000/sqs-envia-documento-service-queue-loc
+  queue-envia-documento: sqs-envia-documento-service-queue-loc
+
+
