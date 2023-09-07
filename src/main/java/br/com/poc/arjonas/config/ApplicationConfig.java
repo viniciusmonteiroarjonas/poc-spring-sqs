@@ -11,11 +11,8 @@ public class ApplicationConfig {
     @Value("${sqs.endpoint}")
     private String getSqsEndpoint;
 
-    @Value("${sqs.queue-envia-documento}")
+    @Value("${sqs.queue.envia-documento}")
     private String getSqsQueueEnviaDocumento;
-
-    @Value("${sqs.url.envia-documento}")
-    private String getSqsUrlEnviaDocumento;
 
     @Value("${cloud.aws.credentials.access-key}")
     private String getCloudAwsCredentialsAccessKey;

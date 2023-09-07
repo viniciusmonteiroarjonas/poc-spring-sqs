@@ -10,6 +10,16 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public class DocumentoRequestDTO {
+
+    @JsonProperty("numero_proposta")
+    private String numeroProposta;
+
+    @JsonProperty("cpf_cnpj")
+    private String cpfCnpj;
+
     @JsonProperty("documento")
     private String documento;
+
+
+
 }
