@@ -1,6 +1,6 @@
 package br.com.poc.arjonas.controller;
 
-import br.com.poc.arjonas.dto.DocumentoRequestDTO;
+import br.com.poc.arjonas.dto.request.PropostaRequestDTO;
 import br.com.poc.arjonas.service.SQSService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +16,7 @@ public class SQSController {
     SQSService sqsService;
 
     @PostMapping("/envia/documento")
-    public String sendDocument(@RequestBody DocumentoRequestDTO request) {
+    public String sendDocument(@RequestBody PropostaRequestDTO request) {
         sqsService.sendDocument(request.getDocumento());
         return "Enviado documento para fila";
     }

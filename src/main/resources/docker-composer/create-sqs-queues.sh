@@ -5,7 +5,7 @@ aws configure set region sa-east-1 --profile=localstack
 ## CREATE QUEUE ##
 aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name sqs-envia-documento-service-queue-loc --attributes VisibilityTimeout=30,MessageRetentionPeriod=604800,DelaySeconds=5 --profile=localstack
 
-## CREATE QUEUE ##
+## LIST QUEUE ##
 aws --endpoint-url=http://localhost:4566 sqs list-queues --profile=localstack
 
 ## SHOW QUEUE ##

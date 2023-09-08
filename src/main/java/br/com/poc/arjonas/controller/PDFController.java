@@ -1,6 +1,6 @@
 package br.com.poc.arjonas.controller;
 
-import br.com.poc.arjonas.dto.DocumentoRequestDTO;
+import br.com.poc.arjonas.dto.request.PropostaRequestDTO;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -36,7 +36,7 @@ public class PDFController {
     }
 
     @PostMapping("/download/documento")
-    public ResponseEntity<byte[]> downloadPdf(@RequestBody DocumentoRequestDTO request) {
+    public ResponseEntity<byte[]> downloadPdf(@RequestBody PropostaRequestDTO request) {
         try {
             // Decodifique a representação base64 em bytes
             byte[] pdfBytes = Base64.getDecoder().decode(request.getDocumento());

@@ -1,4 +1,4 @@
-package br.com.poc.arjonas.dto;
+package br.com.poc.arjonas.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class DocumentoRequestDTO {
+public class PropostaRequestDTO {
 
     @JsonProperty("numero_proposta")
     private String numeroProposta;
