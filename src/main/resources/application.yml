@@ -6,6 +6,9 @@ server:
 spring:
   profiles:
     active: ${PROFILES_ACTIVE}
+  task:
+    scheduling:
+      enabled: true
   autoconfigure:
     exclude:
       - org.springframework.cloud.aws.autoconfigure.messaging.MessagingAutoConfiguration
@@ -37,3 +40,6 @@ sqs:
   queue:
     envia-documento: http://localhost:4566/000000000000/sqs-envia-documento-service-queue-loc
     dlq-envia-documento: http://localhost:4566/000000000000/sqs-dlq-envia-documento-service-queue-loc
+
+
+

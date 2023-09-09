@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class SQSListener {
+public class SQSPropostaListener {
 
     @Autowired
     ObjectMapper objectMapper;
