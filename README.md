@@ -1,18 +1,12 @@
 # Introdução
 
-Projeto que tem o objetivo de receber um documento PDF na requisição e publicar uma mensagem na Fila SQS o documento no formato base64.
+Microserviço que recebe uma mensagem através de uma fila SQS e faz um consulta na API via CEP.
 
 # Ferramentas utilizadas
 - Java 17
 - Maven
 - Localstack
 - Docker
-
-## Docker
-
-``` 
-docker exec -it localstack sh
-```
 
 ## Links
 

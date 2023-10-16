@@ -38,8 +38,13 @@ cloud:
 sqs:
   endpoint: http://localhost:4566
   queue:
-    envia-documento: http://localhost:4566/000000000000/sqs-envia-documento-service-queue-loc
-    dlq-envia-documento: http://localhost:4566/000000000000/sqs-dlq-envia-documento-service-queue-loc
+    consulta-cep: http://localhost:4566/000000000000/sqs-consulta-cep-service-queue-loc
+    consulta-cep-dlq: http://localhost:4566/000000000000/sqs-consulta-cep-service-queue-loc-DLQ
 
+webservice:
+  url:
+    via-cep: https://viacep.com.br/ws/
 
-
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG

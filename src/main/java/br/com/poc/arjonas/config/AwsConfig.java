@@ -23,8 +23,8 @@ public class AwsConfig {
                 .standard()
                 .withEndpointConfiguration(
                         new AwsClientBuilder.EndpointConfiguration(
-                                applicationConfig.getGetSqsEndpoint(),
-                                applicationConfig.getGetCloudAwsRegion()
+                                applicationConfig.getSqsEndpoint(),
+                                applicationConfig.getCloudAwsRegion()
                         )
                 )
                 .build();
@@ -35,8 +35,8 @@ public class AwsConfig {
         return AmazonSQSAsyncClientBuilder.standard()
                 .withEndpointConfiguration(
                         new AwsClientBuilder.EndpointConfiguration(
-                                applicationConfig.getGetSqsEndpoint(),
-                                applicationConfig.getGetCloudAwsRegion()
+                                applicationConfig.getSqsEndpoint(),
+                                applicationConfig.getCloudAwsRegion()
                         )
                 )
                 .build();
